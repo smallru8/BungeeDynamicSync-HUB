@@ -1,0 +1,23 @@
+name: BungeeDynamicSync-Hub
+main: org.skunion.smallru8.BungeeDynamicSync.Hub.Hub
+api-version: 1.18
+version: 1.18-v1
+authors: [smallru8]
+description: BungeeDynamicSync hub system.
+dev-url: https://github.com/smallru8/BungeeDynamicSync-HUB
+commands:
+    bdstool:
+        description: Give you a tool and use this tool right click on a sign can bind this sign to [type] room. When bungeecord create a room of this type, this sign will become a portal.
+        permission: bds.tool
+        usage:
+          /bdstool [type]
+
+permissions:
+    bds.tool:
+        description: Allows bdstool command
+        default: op
+    bds.*:
+        description: Wildcard permission
+        default: op
+        children:
+            bds.tool: true
