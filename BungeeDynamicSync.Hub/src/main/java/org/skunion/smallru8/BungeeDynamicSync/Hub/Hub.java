@@ -6,7 +6,7 @@ import org.skunion.smallru8.BungeeDynamicSync.Hub.redis.Subscriber;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-//TODO bdstool 
+//TODO bdstool command, right click on sign event
 
 public class Hub extends JavaPlugin{
 
