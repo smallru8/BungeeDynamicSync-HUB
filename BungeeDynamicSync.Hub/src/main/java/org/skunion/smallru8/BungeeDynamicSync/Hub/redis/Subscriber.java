@@ -30,8 +30,11 @@ public class Subscriber extends JedisPubSub{
 					Hub.SIGN_DATA.addRoom(cmd[2], cmd[5]);
 				}else if(cmd[1].equals("DEL")&&len==3) {
 					Hub.SIGN_DATA.delRoom(cmd[2]);
+					Hub.JEDIS.del(cmd[2]);
 				}else if(cmd[1].equals("STARTED")&&len==3) {//From Spigot plugin tell everyone its game has started 
 					Hub.SIGN_DATA.delRoom(cmd[2]);
+				}else if(cmd[1].equals("SYNC")&&len==4) {
+					Hub.SIGN_DATA.addRoom(cmd[2], cmd[3]);//SYNC
 				}
 			}
 		}

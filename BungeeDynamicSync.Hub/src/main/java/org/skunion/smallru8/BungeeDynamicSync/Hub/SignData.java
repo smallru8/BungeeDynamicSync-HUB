@@ -86,7 +86,8 @@ public class SignData implements Runnable{
 	public void addRoom(String dynServerName,String motd_type) {
 		Pair<String,String> p = new Pair<String,String>();
 		p.makePair(dynServerName, motd_type);
-		waitForAdd.add(p);
+		if(!waitForAdd.contains(p))
+			waitForAdd.add(p);
 	}
 	
 	public void delRoom(String dynServerName) {
