@@ -17,13 +17,17 @@
         <id>spigot-repo</id>
         <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
+    <repository>
+  		<id>Small2Space</id>
+  		<name>Small2Space</name>
+  		<url>https://raw.github.com/Small2Space/mvn-repo/master</url>
+  	</repository>
   </repositories>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -48,6 +52,11 @@
       <artifactId>json</artifactId>
       <version>20210307</version>
 	</dependency>
+	<dependency>
+      <groupId>org.skunion.smallru8</groupId>
+      <artifactId>Util</artifactId>
+      <version>1.8</version>
+    </dependency>
   </dependencies>
 
   <build>
