@@ -27,11 +27,11 @@ public class Subscriber extends JedisPubSub{
 			int len = cmd.length;
 			if(cmd[0].equals("SERVER")&&len>=2) {
 				if(cmd[1].equals("ADD")&&len==6) {
-					//TODO add to sign
+					Hub.SIGN_DATA.addRoom(cmd[2], cmd[5]);
 				}else if(cmd[1].equals("DEL")&&len==3) {
-					//TODO del from sign
+					Hub.SIGN_DATA.delRoom(cmd[2]);
 				}else if(cmd[1].equals("STARTED")&&len==3) {//From Spigot plugin tell everyone its game has started 
-					//TODO del from sign
+					Hub.SIGN_DATA.delRoom(cmd[2]);
 				}
 			}
 		}
