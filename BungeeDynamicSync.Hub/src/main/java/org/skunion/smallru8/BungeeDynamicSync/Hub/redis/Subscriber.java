@@ -11,6 +11,9 @@ public class Subscriber extends JedisPubSub{
 	
 	public Subscriber() {
 		jedispubsub = this;
+    }
+	
+	public void start() {
 		t = new Thread() {
 			@Override
 			public void run() {
@@ -18,7 +21,7 @@ public class Subscriber extends JedisPubSub{
 			}
 		};
 		t.start();
-    }
+	}
 	
 	@Override
     public void onMessage(String channel, String message) {

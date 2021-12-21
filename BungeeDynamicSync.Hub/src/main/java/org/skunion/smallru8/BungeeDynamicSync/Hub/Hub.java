@@ -29,6 +29,7 @@ public class Hub extends JavaPlugin{
 		JEDIS.auth(getConfig().getString("redis-passwd"));
 		SIGN_DATA = new SignData();
 		REDIS_SUB = new Subscriber();
+		REDIS_SUB.start();
 	}
 	
 	@Override
