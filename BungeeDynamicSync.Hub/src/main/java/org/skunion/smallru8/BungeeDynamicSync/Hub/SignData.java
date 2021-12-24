@@ -197,6 +197,7 @@ public class SignData implements Runnable{
 					sign_block.setLine(0, "["+sign.type+"]");
 					sign_block.setLine(1, sign.roomId);
 					sign_block.setLine(2, sign.status);
+					sign_block.update();
 				}
 			}
 		}
